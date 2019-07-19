@@ -1,0 +1,17 @@
+@mixin font-face($family, $file-name, $weight: normal, $style: normal) {
+  $font-name: str-insert($family, " Regular", 100);
+  $font-name-second: $file-name;
+
+  @font-face {
+    font: {
+      family: $family;
+      weight: $weight;
+      style: $style;
+      display: swap;
+    }
+    src: local($font-name),
+         local($font-name-second),
+         url("../fonts/#{to-lower-case($file-name)}.woff2") format("woff2"),
+         url("../fonts/#{to-lower-case($file-name)}.woff") format("woff");
+  }
+}

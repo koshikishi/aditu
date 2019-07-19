@@ -15,7 +15,7 @@ var htmlmin = require('gulp-htmlmin');
 var del = require('del');
 
 // Компиляция файлов *.css из *.scss с автопрефиксером и минификацией
-gulp.task('css', function () {
+function css() {
   return gulp.src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -30,10 +30,10 @@ gulp.task('css', function () {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
-});
+}
 
 // Запуск сервера Browsersync
-gulp.task('server', function () {
+function server() {
   server.init({
     server: 'build/',
     notify: false,
@@ -42,17 +42,12 @@ gulp.task('server', function () {
     ui: false
   });
 
-  gulp.watch('source/sass/**/*.{scss,sass}', [
-    'css'
-  ]);
-  gulp.watch('source/*.html', [
-    'html',
-    'refresh'
-  ]);
-});
+  gulp.watch('source/sass/**/*.{scss,sass}', css);
+  gulp.watch('source/*.html', gulp.series(html, refresh));
+}
 
 // Сжатие файлов изображений
-gulp.task('img', function () {
+function img() {
   return gulp.src('source/img/*.{png,jpg,svg}')
     .pipe(imagemin([
       imagemin.optipng({
@@ -64,10 +59,10 @@ gulp.task('img', function () {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest('build/img'));
-});
+}
 
 // Минификация файлов *.html
-gulp.task('html', function () {
+function html() {
   return gulp.src('source/*.html')
     .pipe(posthtml([
       include()
@@ -76,10 +71,10 @@ gulp.task('html', function () {
       collapseWhitespace: true
     }))
     .pipe(gulp.dest('build'));
-});
+}
 
 // Копирование файлов в папку build
-gulp.task('copy', function () {
+function copy() {
   return gulp.src([
       'source/fonts/**/*.{woff,woff2}',
       'source/img/**',
@@ -88,29 +83,32 @@ gulp.task('copy', function () {
       base: 'source'
     })
     .pipe(gulp.dest('build'));
-});
+}
 
 // Удаление файлов в папке build перед копированием
-gulp.task('clean', function () {
+function clean() {
   return del('build');
-});
+}
 
 // Создание сборки проекта
-gulp.task('build', [
-  'clean',
-  'copy',
-  'css',
-  'html'
-]);
+var build = gulp.series(clean, copy, gulp.parallel(css, html));
 
 // Автообновление страницы
-gulp.task('refresh', function (done) {
+function refresh(done) {
   server.reload();
   done();
-});
+}
 
 // Создание сборки проекта и запуск сервера Browsersync
-gulp.task('start', [
-  'build',
-  'server'
-]);
+// var start = gulp.series(build, server);
+
+// Объявление задач
+exports.css = css;
+exports.server = server;
+exports.img = img;
+exports.html = html;
+exports.copy = copy;
+exports.clean = clean;
+exports.build = build;
+exports.refresh = refresh;
+// exports.start = start;
