@@ -1,0 +1,11 @@
+.button {
+  @include title(inherit, 19px, 19px);
+  display: inline-block;
+  min-width: 43px;
+  padding: 8px 8px 5px;
+  text-align: center;
+  background-color: $colorSecondary;
+  border: none {
+    radius: 3px;
+  }
+}
