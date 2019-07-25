@@ -1,6 +1,6 @@
-@mixin font-face($family, $file-name, $weight: normal, $style: normal) {
-  $font-name: str-insert($family, " Regular", 100);
-  $font-name-second: $file-name;
+@mixin font-face($family, $fileName, $weight: normal, $style: normal) {
+  $fontName: str-insert($family, " Regular", 100);
+  $fontNameSecond: $fileName;
 
   @font-face {
     font: {
@@ -9,9 +9,22 @@
       style: $style;
       display: swap;
     }
-    src: local($font-name),
-         local($font-name-second),
-         url("../fonts/#{to-lower-case($file-name)}.woff2") format("woff2"),
-         url("../fonts/#{to-lower-case($file-name)}.woff") format("woff");
+    src: local($fontName),
+         local($fontNameSecond),
+         url("../fonts/#{to-lower-case($fileName)}.woff2") format("woff2"),
+         url("../fonts/#{to-lower-case($fileName)}.woff") format("woff");
   }
+}
+
+@mixin text($color: $colorWhite, $fontSize: 17px, $lineHeight: 28px) {
+  margin: 0;
+  font: #{$fontSize}/#{$lineHeight} "Open Sans", "Arial", sans-serif;
+  color: $color;
+}
+
+@mixin title($color: $colorGray, $fontSize: 27px, $lineHeight: 25px) {
+  margin: 0;
+  font: #{$fontSize}/#{$lineHeight} "Bebas Neue", "Arial", sans-serif;
+  color: $color;
+  text-transform: uppercase;
 }
