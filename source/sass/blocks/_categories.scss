@@ -1,0 +1,38 @@
+.categories {
+  position: relative;
+  background-color: $colorWhite;
+  box-shadow: 1px 2px 3px rgba($colorBlack, 0.13);
+}
+
+.categories__control {
+  position: relative;
+}
+
+.categories__arrow {
+  position: absolute;
+  top: 51px;
+  width: 29px;
+  height: 88px;
+  padding: 0;
+  background: none {
+    repeat: no-repeat;
+  }
+  border: none;
+  cursor: pointer;
+
+  &--prev {
+    left: -96px;
+    background-image: url("../img/icon_arrow_prev.svg");
+  }
+
+  &--next {
+    right: -92px;
+    background-image: url("../img/icon_arrow_next.svg");
+  }
+}
+
+.categories__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

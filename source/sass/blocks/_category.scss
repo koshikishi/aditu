@@ -1,0 +1,22 @@
+.category {
+  display: flex;
+  box-sizing: border-box;
+  width: 341px;
+
+  &:not(:nth-child(3n+1)) {
+    border-left: 1px solid rgba($colorGray, 0.3);
+  }
+}
+
+.category__image {
+  width: 200px;
+}
+
+.category__inner {
+  padding: 52px 40px 40px 0;
+}
+
+.category__title {
+  @include title;
+  margin-bottom: 15px;
+}

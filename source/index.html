@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Aditu — Online Clothing Store</title>
+    <link rel="preload" href="fonts/bebasneue-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__top container">
+        <a class="logo header__logo">
+          <img class="logo__image" src="img/logo.png" alt="Aditu Store Logo" width="110" height="43">
+        </a>
+        <form class="header__search" action="" method="get">
+          <input class="header__search-field" type="search" name="search">
+          <button class="header__search-button" type="submit">
+            <span class="visually-hidden">Search</span>
+          </button>
+        </form>
+        <div class="user-nav">
+          <a class="user-nav__link user-nav__link--cart" href="cart.html">$300</a>
+        </div>
+      </div>
+      <nav class="header__main-nav">
+        <ul class="main-nav container">
+          <li class="main-nav__item">
+            <a class="main-nav__link">Home</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Sale</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Handbags</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Wallets</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Accessories</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Mens Store</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Shoes</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Vintage</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="services.html">Services</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="contacts.html">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Aditu — Online Clothing Store</h1>
+      <section class="slider container">
+        <h2 class="visually-hidden">Special Offers</h2>
+        <ul class="slider__list">
+          <li class="slider__item slider__item--active">
+            <img class="slider__image" src="img/slider_04.png" alt="Cowhide Standard Crew" width="434" height="446">
+            <div class="slider__description">
+              <h3 class="slider__title">Cowhide Standard Crew</h3>
+              <p class="slider__text">White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit.</p>
+              <a class="button-second slider__button" href="#">Shop Now</a>
+            </div>
+          </li>
+        </ul>
+        <div class="slider__control">
+          <button class="slider__dot" type="button">
+            <span class="visually-hidden">First Slider</span>
+          </button>
+          <button class="slider__dot" type="button">
+            <span class="visually-hidden">Second Slider</span>
+          </button>
+          <button class="slider__dot" type="button">
+            <span class="visually-hidden">Third Slider</span>
+          </button>
+          <button class="slider__dot slider__dot--active" type="button">
+            <span class="visually-hidden">Fourth Slider</span>
+          </button>
+          <button class="slider__dot" type="button">
+            <span class="visually-hidden">Fifth Slider</span>
+          </button>
+        </div>
+      </section>
+      <section class="categories">
+        <div class="container">
+          <h2 class="visually-hidden">Featured Categories</h2>
+          <div class="categories__control">
+            <button class="categories__arrow categories__arrow--prev" type="button">
+              <span class="visually-hidden">Previous Categories</span>
+            </button>
+            <button class="categories__arrow categories__arrow--next" type="button">
+              <span class="visually-hidden">Next Categories</span>
+            </button>
+          </div>
+          <div class="categories__list">
+            <div class="category">
+              <img class="category__image" src="img/category_01.jpg" alt="Branded Shoes" width="200" height="190">
+              <div class="category__inner">
+                <h3 class="category__title">Branded Shoes</h3>
+                <a class="button" href="#">Shop</a>
+              </div>
+            </div>
+            <div class="category">
+              <img class="category__image" src="img/category_02.jpg" alt="Branded Tshirts" width="200" height="190">
+              <div class="category__inner">
+                <h3 class="category__title">Branded Tshirts</h3>
+                <a class="button" href="#">Shop</a>
+              </div>
+            </div>
+            <div class="category">
+              <img class="category__image" src="img/category_03.jpg" alt="Branded Shoes" width="200" height="190">
+              <div class="category__inner">
+                <h3 class="category__title">Branded Shoes</h3>
+                <a class="button" href="#">Shop</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <h2 class="products__title container">Featured Products</h2>
+        <div class="products__wrapper">
+          <div class="products__list container">
+            <div class="product products__item">
+              <h3 class="product__title">Branded Shoe</h3>
+              <img class="product__image" src="img/product_01.jpg" alt="Branded Shoe" width="253" height="155">
+              <p class="product__price">
+                $300
+                <a class="button button--second product__button" href="#">Buy Now</a>
+              </p>
+            </div>
+            <div class="product products__item">
+              <h3 class="product__title">Branded Tees</h3>
+              <img class="product__image" src="img/product_02.jpg" alt="Branded Tees" width="253" height="155">
+              <p class="product__price">
+                $300
+                <a class="button button--second product__button" href="#">Buy Now</a>
+              </p>
+            </div>
+            <div class="product products__item">
+              <h3 class="product__title">Branded Shoe</h3>
+              <img class="product__image" src="img/product_03.jpg" alt="Branded Shoe" width="253" height="155">
+              <p class="product__price">
+                $300
+                <a class="button button--second product__button" href="#">Buy Now</a>
+              </p>
+            </div>
+            <div class="product products__item">
+              <h3 class="product__title">Branded Shoe</h3>
+              <img class="product__image" src="img/product_04.jpg" alt="Branded Shoe" width="253" height="155">
+              <p class="product__price">
+                $300
+                <a class="button button--second product__button" href="#">Buy Now</a>
+              </p>
+            </div>
+            <div class="product products__item">
+              <h3 class="product__title">EMS Women Bag</h3>
+              <img class="product__image" src="img/product_05.jpg" alt="EMS Women Bag" width="253" height="155">
+              <p class="product__price">
+                $300
+                <a class="button button--second product__button" href="#">Buy Now</a>
+              </p>
+            </div>
+            <div class="product products__item">
+              <h3 class="product__title">Branded Cargos</h3>
+              <img class="product__image" src="img/product_06.jpg" alt="Branded Cargos" width="253" height="155">
+              <p class="product__price">
+                $300
+                <a class="button button--second product__button" href="#">Buy Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__columns container">
+        <div class="footer__column">
+          <h2 class="footer__title">Featured Sale</h2>
+          <ul class="footer__links">
+            <li>
+              <a class="footer__link" href="#">Alexis Hudson</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">American Apparel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Ben Sherman</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Big Buddha</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Chanel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Christian Audigier</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Coach</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Cole Haan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h2 class="footer__title">Mens Store</h2>
+          <ul class="footer__links">
+            <li>
+              <a class="footer__link" href="#">Alexis Hudson</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">American Apparel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Ben Sherman</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Big Buddha</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Chanel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Christian Audigier</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Coach</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Cole Haan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h2 class="footer__title">Women Store</h2>
+          <ul class="footer__links">
+            <li>
+              <a class="footer__link" href="#">Alexis Hudson</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">American Apparel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Ben Sherman</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Big Buddha</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Chanel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Christian Audigier</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Coach</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Cole Haan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h2 class="footer__title">Quick Links</h2>
+          <ul class="footer__links">
+            <li>
+              <a class="footer__link" href="#">Alexis Hudson</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">American Apparel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Ben Sherman</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Big Buddha</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Chanel</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Christian Audigier</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Coach</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Cole Haan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

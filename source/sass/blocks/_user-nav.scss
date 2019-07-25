@@ -1,0 +1,13 @@
+.user-nav {
+  @include title($colorGrayL, 33px, 46px);
+  display: flex;
+}
+
+.user-nav__link {
+  color: inherit;
+
+  &--cart {
+    padding-left: 56px;
+    background: url("../img/icon_cart.svg") top left no-repeat;
+  }
+}
