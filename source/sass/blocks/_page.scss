@@ -1,5 +1,6 @@
 .page {
   @include text;
   min-width: 1280px;
+  margin: 0;
   background: url("../img/bg.png") $colorPrimary;
 }

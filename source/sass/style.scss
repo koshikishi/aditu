@@ -12,3 +12,6 @@
 
 // Подключаем основные стили
 @import "misc/base", "blocks/page";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/logo", "blocks/user-nav", "blocks/main-nav";

@@ -17,13 +17,19 @@
 }
 
 @mixin text($color: $colorWhite, $fontSize: 17px, $lineHeight: 28px) {
-  margin: 0;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
   font: #{$fontSize}/#{$lineHeight} "Open Sans", "Arial", sans-serif;
   color: $color;
 }
 
 @mixin title($color: $colorGray, $fontSize: 27px, $lineHeight: 25px) {
-  margin: 0;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
   font: #{$fontSize}/#{$lineHeight} "Bebas Neue", "Arial", sans-serif;
   color: $color;
   text-transform: uppercase;

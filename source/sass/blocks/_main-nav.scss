@@ -1,0 +1,26 @@
+.main-nav {
+  @include title(inherit, 21px, 19px);
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 9px 19px 8px;
+  list-style: none;
+}
+
+.main-nav__item + .main-nav__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 2px;
+    height: 18px;
+    background-color: currentColor;
+  }
+}
+
+.main-nav__link {
+  color: inherit;
+}
