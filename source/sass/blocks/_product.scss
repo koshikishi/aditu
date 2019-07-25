@@ -1,0 +1,30 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 253px;
+  padding-bottom: 30px;
+  background-color: $colorWhite;
+  border-bottom: 5px solid $colorSecondary;
+  box-shadow: 0 0 3px rgba($colorBlack, 0.16);
+}
+
+.product__title {
+  @include title;
+  margin-bottom: 7px;
+}
+
+.product__image {
+  order: -1;
+  width: 253px;
+  margin-bottom: 4px;
+}
+
+.product__price {
+  @include title;
+  margin-left: 14px;
+}
+
+.product__button {
+  margin-left: 10px;
+}

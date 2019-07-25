@@ -1,0 +1,19 @@
+.products__title {
+  @include title($colorWhite, 31px);
+  padding: 24px 57px 18px;
+}
+
+.products__wrapper {
+  background-color: $colorWhite;
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 48px 88px 26px 63px;
+}
+
+.products__item {
+  margin-bottom: 47px;
+}
