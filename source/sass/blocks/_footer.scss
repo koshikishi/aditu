@@ -1,0 +1,29 @@
+.footer {
+  background-color: $colorPrimary;
+  border-bottom: 46px solid $colorPrimaryD;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 41px 24px 33px 57px;
+}
+
+.footer__column {
+  width: 228px;
+}
+
+.footer__title {
+  @include title($colorWhite);
+  margin-bottom: 14px;
+}
+
+.footer__links {
+  @include text(inherit, 15px);
+  padding-left: 4px;
+  list-style: none;
+}
+
+.footer__link {
+  color: inherit;
+}
