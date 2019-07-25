@@ -1,9 +1,14 @@
 {
   "name": "aditu",
   "version": "0.1.0",
+  "scripts": {
+    "deploy": "gh-pages -d build -m 'Сделал сборку сайта'"
+  },
+  "homepage": "https://koshikishi.github.io/aditu",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.0.0",
+    "gh-pages": "^2.0.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
