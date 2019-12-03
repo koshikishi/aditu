@@ -22,7 +22,9 @@
 .header__search-field {
   box-sizing: border-box;
   width: 100%;
-  padding: 8px;
+  padding: 8px {
+    right: 40px;
+  }
   border: 1px solid $colorGrayXL;
 }
 
