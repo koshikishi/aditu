@@ -1,8 +1,8 @@
 {
   "name": "aditu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
-    "deploy": "gh-pages -d build -m 'Сделал сборку сайта'"
+    "deploy": "gh-pages -d build -m \"Сделал сборку сайта\""
   },
   "homepage": "https://koshikishi.github.io/aditu",
   "devDependencies": {
