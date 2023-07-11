@@ -6,7 +6,7 @@
   },
   "homepage": "https://koshikishi.github.io/aditu",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.3",
     "del": "^5.0.0",
     "gh-pages": "^2.0.1",
     "gulp": "^4.0.2",
